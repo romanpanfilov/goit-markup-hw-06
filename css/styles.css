@@ -79,10 +79,14 @@ address {
   align-items: center;
 }
 
+.container-header a {
+  flex-grow: 1;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 76px;
+  /* gap: 76px; */
   flex-grow: 1;
 }
 
@@ -94,9 +98,10 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* margin-right: 76px; */
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+  padding: 24px 0;
 }
 .logo-item {
   font-family: "Raleway", sans-serif;
@@ -109,7 +114,8 @@ address {
 }
 
 .header-menu {
-  display: flex;
+  /* display: flex; */
+  display: none;
   gap: 40px;
 }
 
@@ -158,7 +164,8 @@ address {
 }
 
 .header-adress-menu {
-  display: flex;
+  /* display: flex; */
+  display: none;
   gap: 40px;
   align-items: center;
 }
@@ -189,33 +196,51 @@ address {
 /*------------------ BUISINES SECTION -------------------*/
 
 .business-section {
+}
+
+.hero-container {
   background-color: #2e2f42;
-  padding: 188px 0;
+  /* padding: 188px 0; */
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg.jpg);
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  /* max-width: 320px; */
   margin: 0 auto;
 }
 
-.hero-container {
+@media screen and (-webkit-min-device-pexel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-mob-2x.jpg);
+  }
 }
 
 .business-title {
-  font-size: 56px;
-  line-height: 107%;
+  /* font-size: 56px; */
+  font-size: 36px;
+  /* line-height: 107%; */
+  line-height: 111%;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  /* max-width: 496px; */
+  width: 216px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
 }
 
 .business-button {
@@ -550,7 +575,7 @@ address {
   color: #f4f4fd;
   /* width: 264px; */
   width: 288px;
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
 .footer-social {
@@ -932,7 +957,7 @@ address {
     margin: 0 auto;
   }
 
-  .footer-container .container {
+  .footer .container {
     max-width: 584px;
   }
 
@@ -942,6 +967,10 @@ address {
 
   .features-menu-list {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .features-menu-subtitle {
+    text-align: left;
   }
 
   .team-menu {
@@ -968,6 +997,7 @@ address {
 
   .footer-container {
     gap: 72px 24px;
+    justify-content: flex-start;
   }
 
   .footer-logo-text {
@@ -984,6 +1014,34 @@ address {
 
   .footer-subscribe-text {
     text-align: left;
+  }
+
+  .hero-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-tab.jpg);
+    padding: 112px 0;
+  }
+
+  @media screen and (-webkit-min-device-pexel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg-tab-2x.jpg);
+    }
+  }
+
+  .business-title {
+    font-size: 56px;
+    line-height: 107%;
+    width: 496px;
+    margin-bottom: 36px;
   }
 }
 
@@ -1075,6 +1133,7 @@ address {
   }
 
   .footer-container {
+    justify-content: center;
     align-items: baseline;
     flex-wrap: nowrap;
     gap: inherit;
@@ -1092,5 +1151,34 @@ address {
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: flex-start;
+  }
+
+  .hero-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg.jpg);
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+
+  @media screen and (-webkit-min-device-pexel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg-2x.jpg);
+    }
+  }
+
+  .business-title {
+    font-size: 56px;
+    line-height: 107%;
+    max-width: 496px;
+    margin-bottom: 48px;
   }
 }
